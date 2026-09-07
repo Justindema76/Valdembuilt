@@ -1,0 +1,813 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Great+Vibes&family=Playwrite+IN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  
+}
+
+h1 {
+  scroll-margin-top: 50px; /* Adjust this value based on the height of your navbar */
+}
+ul {
+  list-style-type: none; /* Removes the bullet points */
+  padding-left: 0; /* Optional: Removes the left padding */
+}
+
+/* Dots inside the Toggler */
+.navbar-toggler .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #053050;
+  border-radius: 50%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Position middle dot as the pivot point */
+.navbar-toggler .dot:nth-child(2) {
+  position: relative;
+  z-index: 1; /* Make sure it's on top */
+}
+
+/* Hover Effect: Rotate top and bottom dots */
+.navbar-toggler:hover .dot:nth-child(1) {
+  transform:  translateX(10px); 
+}
+
+.navbar-toggler:hover .dot:nth-child(3) {
+  transform:  translateX(-10px); 
+}
+
+
+
+/* Move the toggler to the left */
+.navbar-toggler {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  border-radius: 0;
+  width: 40px;
+  height: 80px;
+  cursor: pointer;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+#offcanvas-menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background: #053050;
+  transition: left 1.0s ease-in-out;
+  z-index: 1055;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  padding-top: 100px; /* Add padding to move the content down */
+  padding-left: 20px; /* Maintain existing padding */
+  padding-right: 20px;
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center horizontally */
+}
+
+#offcanvas-menu.active {
+  left: 0; /* Slide into view from the left */
+}
+
+.menu-link {
+  max-width: 150px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  margin: 10px 0;
+  
+}
+
+
+
+.menu-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Close Button styled like Navbar Toggler */
+.close-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between dots */
+}
+
+.close-btn .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.close-btn:hover .dot:nth-child(1) {
+  transform:  translateX(10px); 
+}
+
+.close-btn:hover .dot:nth-child(3) {
+  transform:  translateX(-10px); 
+}
+
+
+
+#offcanvas-menu .dropdown-menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-toggler:focus {
+  outline: 0; /* Removes default browser focus */
+  box-shadow: none;
+}
+
+
+nav .container-fluid {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
+
+
+.logo-container img {
+  height: 150px; /* Adjust as needed */
+  width: auto; /* Maintains aspect ratio */
+}
+
+
+
+body{
+  font-family: "Red Hat Display", serif;
+
+}
+
+
+h1{
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #053050;
+  
+}
+
+h2{
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #053050;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #053050;
+}
+
+h4{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+h5{
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+h6{
+  
+  color: #053050;
+}
+p{
+  font-weight: 200;
+  font-size: 1.1rem;
+}
+
+/* .navbar-light{
+  background-color: #eee;
+} */
+
+.navbar-nav .nav-link{
+  padding: 0 10px;
+  columns: #000;
+  transition: 0.4s ease;
+}
+
+
+#home {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #ffffff;
+  padding: 20px 0;
+  background-color: #eee;
+}
+
+
+#home .bio-name h1{
+  font-size: 2.5rem;
+  font-family: "Red Hat Display", serif
+
+}
+
+#home .bio-name h5{
+  font-family: "Birthstone", serif;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+
+#home .bio-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Image Styling */
+#home .bio-image img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#home .bio-details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff; /* White background */
+  padding: 20px; /* Add inner spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+}
+
+#home .bio-details h4{
+  font-family: "Birthstone", serif;
+  color: #000;
+  font-size: 2.0rem;
+}
+
+#home .bio-details p{
+color: #999;
+font-size: 1.1rem;
+}
+
+header {
+  background: url(../images/bkg-image2.png) no-repeat center center;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(231, 231, 231, 0.3);  */
+  z-index: 1;
+}
+
+
+
+#logo-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: fadeInLogo 10s forwards;
+  z-index: 2;
+  width: auto; /* Width of the logo */
+  height: 60%; /* Height of the logo */
+  
+}
+
+
+@media (max-width: 600px) { 
+  #logo-header {
+    width: 80%; 
+    height: auto; 
+  }
+
+  
+}
+
+
+@keyframes fadeInLogo {
+  0% {
+    opacity: 0; /* Logo starts invisible */
+  }
+  100% {
+    opacity: 1; /* Logo becomes fully visible */
+  }
+}
+
+
+
+/* #services{
+  background-color: #eee;
+}
+
+#testimonials{
+  background-color: #eee;
+  
+} */
+
+.card{
+  border-radius: 0;
+}
+.card-text {
+  font-family: "Red Hat Display", serif;
+  color: #053050;
+  
+}
+
+.card-title{
+  font-family: "Birthstone", serif;
+  font-size: 1.5rem;
+  color: #053050;
+}
+.card-title span{
+  font-family: "Red Hat Display", serif;
+  font-size: 1.0rem;
+  font-weight: 400;
+}
+
+.card-title span a{
+  color: #053050;
+}
+
+footer .quote-box h1{
+  
+  font-size: 1.5rem;
+  font-family: "Birthstone", serif;
+  color: #053050;
+}
+
+footer .quote-box p{
+  
+  font-size: 1.5rem;
+  font-family: "Birthstone", serif;
+  color: #053050;
+}
+
+footer .footer-one .logo-name h3{
+  color: rgb(0, 0, 0);
+}
+footer{
+  background-color: #ffffff;
+  color: #000000;
+}
+
+footer h5{
+  color: #053050;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+footer li {
+  padding-bottom: 4px;
+  font-size: 1rem;
+  color: #999;
+  text-decoration: none;
+  
+}
+
+footer li a{
+  font-size: 1rem;
+  color: #999;
+  text-decoration: none;
+}
+
+footer li a:hover{
+  color: #053050;
+}
+
+footer .copyright a{
+  color: #053050;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  transition: .3s ease;
+  margin: 0 5px;
+  padding: 0;
+  display: inline-block;
+}
+
+
+
+footer .copyright p{
+  color: #fff;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  
+}
+
+footer .footer-one .row .fab{
+  color: #053050;
+  padding-top: 10px;
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-one .footer-logo{
+  width: 150px;
+  height: auto;
+  margin: 50px 0;
+ 
+}
+
+.bot-logo {
+  max-width: 100%;
+  height: auto; /* Ensure it keeps its aspect ratio */
+  margin-bottom: 10px;
+  display: block; /* Ensure image is centered */
+}
+
+
+p {
+  margin: 0; /* Remove default margin for better centering */
+}
+.contact-list {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.contact-item {
+  display: flex; /* Use flexbox for inline alignment */
+  align-items: center; /* Vertically align icon and text */
+  gap: 10px; /* Space between the icon and text */
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.contact-icon {
+  display: inline-block; /* Ensure the icon behaves like text */
+ 
+}
+
+.contact-item a {
+  text-decoration: none; /* Remove underline from links */
+  
+}
+
+.footer-icon {
+  color: #053050;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 600,
+  'GRAD' 0,
+  'opsz' 24,
+  
+}
+
+
+
+/* gallery Container */
+
+
+.section-header h1{
+    font-size: 5.0rem;
+    /* font-family: "Red Hat Display", serif; */
+    font-weight: 300;
+    font-style: normal;
+    color: #053050;
+    font-family: "Birthstone", serif;
+}
+
+.gallery-container {
+  width: 100%;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* gallery Row Layout */
+.gallery-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* gallery Item Layout */
+.gallery-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  align-items: center;
+  gap: 20px;
+}
+
+/* Image Styling */
+.gallery-image img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+ 
+}
+
+/* Details Styling */
+.gallery-details {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.title h2 {
+  font-size: 2.7rem;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: -3px;
+  opacity: 0; /* Start invisible */
+  transform: translateY(50px); /* Start slightly offset downward */
+  transition: all 0.7s ease; /* Smooth transition */
+  font-style: normal;
+  color: #053050;
+}
+
+.title h2.visible {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to original position */
+  letter-spacing: 1px; /* Adjust letter spacing */
+  
+}
+
+.title h5 {
+  font-size: 2.0rem;
+  margin: 0 0 10px;
+  /* text-transform: uppercase; */
+  font-family: "Birthstone", serif;
+  color: #053050;
+  text-transform: lowercase;
+}
+
+.gallery-item a {
+  text-decoration: none; /* Removes the underline */
+}
+
+/* Mobile Adjustment GALLERY */
+@media (max-width: 600px) {
+  .gallery-item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Optional for alignment */
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+
+  .gallery-image {
+    order: -1; /* Force images to come first */
+    
+  }
+
+  .title {
+    margin-top: 0; /* Remove extra spacing */
+  }
+
+}
+/* Center Elements for Small Screens */
+@media (max-width: 600px) {
+  .title {
+    text-align: center; /* Center text */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    
+  }
+  .title h2{
+    font-size: 2.0rem;
+  }
+
+}
+
+
+
+
+.project-title h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 300;
+  opacity: 0; /* Initially invisible */
+  transform: translateY(50px); /* Start 50px below */
+  transition: all 0.7s ease; /* Smooth transition for opacity and position */
+  color: #053050;
+}
+
+.project-title h2.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to the original position */
+  letter-spacing: 1px; /* Adjust letter spacing */
+}
+
+
+.project-title h5 {
+  font-size: 2.0rem;
+  margin: 0 0 10px;
+  color: #053050;
+  font-family: "Birthstone", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Default img-cover style */
+.img-cover {
+  width: 100%; /* Ensures the image fills the width of the container */
+  height: 85vh; /* Ensures the image fills the height of the container */
+  object-fit: cover; /* Maintains aspect ratio and crops the image to fit */
+  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow effect */
+}
+
+/* Optional: If you want to keep animation for larger screens */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animated-title {
+  animation: fadeIn 1.5s ease-in-out; /* Example animation */
+}
+
+
+/* Apply contain only to images in col-lg-12 and col-lg-8 on mobile */
+@media (max-width: 600px) {
+  .col-lg-12 .img-cover,
+  .col-lg-8 .img-cover {
+    object-fit: contain; /* Makes sure entire image is visible */
+    height: auto; /* Ensures the image height adjusts for containment */
+    max-height: 85vh; /* Ensures height doesn't get too large on mobile */
+  }
+}
+
+
+#top .bio-name h1{
+  font-size: 2.5rem;
+  font-family: "Red Hat Display", serif;
+  font-weight: 300;
+
+}
+
+#top .bio-name h5{
+  font-family: "Birthstone", serif;
+  color: #053050;
+  font-size: 1.5rem;
+}
+
+
+#top .bio-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Image Styling */
+#top .bio-image img {
+  width: 100%;
+  height: auto;
+ 
+}
+
+#top .bio-details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white; /* White background */
+  padding: 50px; /* Add inner spacing */
+ 
+}
+
+#top .bio-details h4{
+  font-family: "Birthstone", serif;
+  color: #053050;
+  font-size: 2.0rem;
+}
+
+#top .bio-details p{
+color: #585858;
+font-size: 1.2rem;
+}
+
+#top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #ffffff;
+  padding: 20px 0;
+  background-color: white;
+}
+
+  /* Back to Top Button Styles */
+  #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none; /* Initially hidden */
+    background-color: #053050; 
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  #backToTop:hover {
+    background-color: #06487a; 
+  }
+
+  .back-to-gallery {
+    position: fixed;
+    bottom:  20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: #053050; 
+    border-radius: 25px;
+    
+  }
+  
+  .back-to-gallery a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+  }
+  
+  .back-to-gallery a:hover {
+    background-color: #06487a; 
+    color: #fff;
+    border-radius: 25px;
+  }
+  
